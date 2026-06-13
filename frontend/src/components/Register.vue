@@ -70,7 +70,7 @@ const registerUser = async () => {
   success.value = ''
 
   try {
-    const res = await fetch('/api/register', {
+    const res = await fetch(`${window.API_URL}/api/register`, {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
