@@ -118,7 +118,7 @@ const updateLot = async () => {
   success.value = ""
 
   try {
-    const res = await fetch(`/api/admin/lots/${lotId}`, {
+    const res = await fetch(`${API_BASE}/api/admin/lots/${lotId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
