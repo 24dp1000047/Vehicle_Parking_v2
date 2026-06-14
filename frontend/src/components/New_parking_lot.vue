@@ -59,6 +59,7 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import AdminNavbar from './AdminNavbar.vue'
+import { API_BASE } from '../config'
 
 const prime_location_name = ref('')
 const address = ref('')
@@ -75,7 +76,7 @@ const addLot = async () => {
   success.value = ''
 
   try {
-    const res = await fetch('/api/admin/lots', {
+    const res = await fetch(`${API_BASE}/api/admin/lots`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
