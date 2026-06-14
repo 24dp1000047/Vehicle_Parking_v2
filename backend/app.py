@@ -16,6 +16,11 @@ mail = Mail()
 def create_app():
     app = Flask(__name__)
     app.config.from_object(LocalDevelopmentConfig)
+    CORS(app, resources={r"/api/*": {"origins": [
+    "https://vehicle-parking-v2-1.onrender.com",
+    "http://localhost:5173",
+    "http://localhost:8080"
+]}}, supports_credentials=True)
     
     # Celery Configuration (use lowercase keys)
     app.config['broker_url'] = 'redis://localhost:6379/1'
