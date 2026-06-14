@@ -6,6 +6,7 @@ from application.security import jwt
 from flask_caching import Cache
 from celery import Celery
 from flask_mail import Mail, Message
+from flask_cors import CORS
 
 app = None
 celery = None
