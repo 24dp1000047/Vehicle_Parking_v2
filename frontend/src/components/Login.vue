@@ -45,7 +45,7 @@ const router = useRouter()
 const login = async () => {
   error.value = ''
   try {
-    const res = await fetch('/api/login', {
+    const res = await fetch('https://vehicle-parking-v2-5zb6.onrender.com/api/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: email.value, password: password.value })
