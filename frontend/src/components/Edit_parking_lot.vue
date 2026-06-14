@@ -68,6 +68,7 @@
 import { ref, onMounted } from "vue"
 import { useRoute, useRouter } from "vue-router"
 import AdminNavbar from './AdminNavbar.vue'
+import { API_BASE } from '../config'
 
 const route = useRoute()
 const router = useRouter()
@@ -86,7 +87,7 @@ const success = ref("")
 const loadLot = async () => {
   error.value = ""
   try {
-    const res = await fetch("/api/admin/lots", {
+    const res = await fetch(`${API_BASE}/api/admin/lots`, {
       headers: { Authorization: "Bearer " + localStorage.getItem("token") }
     })
 
