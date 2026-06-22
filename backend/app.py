@@ -40,8 +40,10 @@ def create_app():
     mail.init_app(app)
     
     # Initialize Cache
-    app.config['CACHE_TYPE'] = 'RedisCache'
-    app.config['CACHE_REDIS_URL'] = 'redis://localhost:6379/0'
+    #app.config['CACHE_TYPE'] = 'RedisCache'
+    app.config['CACHE_TYPE'] = 'SimpleCache'
+
+    #app.config['CACHE_REDIS_URL'] = 'redis://localhost:6379/0'
     cache.init_app(app)
     
     app.app_context().push()
