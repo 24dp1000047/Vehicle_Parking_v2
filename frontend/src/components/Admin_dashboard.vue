@@ -93,7 +93,7 @@ const fetchLots = async () => {
     error.value = "";
     // Add timestamp to bypass all caching
     const timestamp = new Date().getTime();
-    const res = await fetch(`/api/admin/lots?_t=${timestamp}`, {
+    const res = await fetch(`${API_BASE}/api/admin/lots?_t=${timestamp}`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
         "Cache-Control": "no-cache",
