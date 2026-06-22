@@ -116,7 +116,7 @@ const deleteLot = async (id) => {
   if (!confirm("Delete this parking lot? This action cannot be undone.")) return;
 
   try {
-    const res = await fetch(`/api/admin/lots/${id}`, {
+    const res = await fetch(`${API_BASE}/api/admin/lots/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
