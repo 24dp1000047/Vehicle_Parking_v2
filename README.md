@@ -1,6 +1,8 @@
 # 🚗 Vehicle Parking Management System — Version 2
 
-An API-driven full-stack Vehicle Parking Management System built using Flask, Vue.js, Redis, and Celery. This version is a scalable redesign of V1 with a modern frontend, RESTful APIs, caching, and background task processing.
+An API-driven full-stack Vehicle Parking Management System built using Flask, Vue.js, Redis, and Celery. This version is a scalable redesign of V1 with a modern frontend, RESTful APIs, caching, background task processing, and dynamic parking fee calculation.
+
+---
 
 ## 🎥 Application Demo
 
@@ -15,22 +17,25 @@ Watch the complete project demonstration here:
 * Role-Based Access Control (Admin/User)
 * Parking Lot & Parking Spot Management
 * Vehicle Reservation System
+* Dynamic Parking Fee Calculation
 * Admin Dashboard
 * User Dashboard
 * Redis Caching
 * Celery Background Jobs
 * Monthly Report Generation
-* REST API Integration with VueJS Frontend
+* REST API Integration with Vue.js Frontend
 
 ---
 
 ## 🔗 Repository
 
 GitHub Repository:
+
 https://github.com/24dp1000047/Vehicle_Parking_v2
 
 🔁 Previous Version:
-Vehicle_Parking_App (V1) — Server-side Flask + Jinja2 Architecture
+
+Vehicle_Parking_App (V1) — Flask + Jinja2 Server-Side Architecture
 
 ---
 
@@ -38,7 +43,7 @@ Vehicle_Parking_App (V1) — Server-side Flask + Jinja2 Architecture
 
 | Layer           | Technology         |
 | --------------- | ------------------ |
-| Backend         | Flask (REST API)   |
+| Backend         | Flask REST API     |
 | Frontend        | Vue.js, Bootstrap  |
 | Database        | SQLite             |
 | Authentication  | JWT Authentication |
@@ -53,30 +58,41 @@ Vehicle_Parking_App (V1) — Server-side Flask + Jinja2 Architecture
 ### 🔐 Authentication & Authorization
 
 * JWT-based authentication
-* Secure login and registration
+* Secure user login and registration
 * Role-Based Access Control (RBAC)
-* Separate Admin and User access levels
+* Separate Admin and User dashboards
 
 ### 🚗 Parking Management
 
-* Parking lot management
-* Parking spot allocation
+* Create and manage parking lots
+* Automatic parking spot allocation
 * Vehicle reservation system
 * Parking history tracking
-* Automatic parking fee calculation
+* Real-time parking occupancy management
 
-### 📊 Dashboard & Reporting
+### 💰 Dynamic Parking Fee Calculation
+
+* Automatic entry timestamp recording during reservation
+* Exit timestamp recording during vehicle release
+* Real-time parking duration calculation
+* Dynamic parking charge computation based on parking lot rates
+* Accurate billing and fee tracking
+* Reservation-wise parking cost history
+
+### 📊 Dashboard & Reports
 
 * Admin Dashboard
 * User Dashboard
-* Parking utilization insights
+* Parking usage statistics
+* Reservation history
 * Monthly activity reports
 
 ### ⚡ Performance Optimization
 
 * Redis caching for frequently accessed data
 * Faster API response times
-* Optimized database interactions
+* Reduced database load
+* Optimized backend performance
 
 ### 📬 Background Processing
 
@@ -85,19 +101,30 @@ Vehicle_Parking_App (V1) — Server-side Flask + Jinja2 Architecture
 * Monthly report generation
 * Asynchronous task execution
 
+### 🌐 RESTful Architecture
+
+* Complete frontend-backend separation
+* REST API communication
+* Vue.js Single Page Application (SPA)
+* Scalable and maintainable architecture
+
 ---
 
 ## 🏗️ System Architecture
 
-Frontend (Vue.js SPA)
-⬇
+```text
+Vue.js Frontend (SPA)
+           │
+           ▼
 Flask REST API Backend
-⬇
-SQLite Database
-
-↕ Redis Cache
-
-↕ Celery Background Jobs
+           │
+           ▼
+       SQLite DB
+           │
+ ┌─────────┴─────────┐
+ ▼                   ▼
+Redis Cache     Celery Workers
+```
 
 ---
 
@@ -116,9 +143,11 @@ SQLite Database
 
 ```bash
 git clone https://github.com/24dp1000047/Vehicle_Parking_v2
+
 cd Vehicle_Parking_v2/backend
 
 pip install -r requirements.txt
+
 flask run
 ```
 
@@ -128,6 +157,7 @@ flask run
 cd frontend
 
 npm install
+
 npm run dev
 ```
 
@@ -151,7 +181,7 @@ celery -A app.celery worker --loglevel=info
 
 ```text
 Vehicle_Parking_v2/
-│
+
 ├── backend/
 │   ├── application/
 │   ├── instance/
@@ -172,27 +202,28 @@ Vehicle_Parking_v2/
 
 ## 🎯 Learning Outcomes
 
-This project helped me gain hands-on experience with:
+This project helped me gain practical experience in:
 
 * Full Stack Development
-* REST API Design
-* JWT Authentication
-* Role-Based Access Control
+* Flask REST API Development
 * Vue.js Single Page Applications
+* JWT Authentication
+* Role-Based Access Control (RBAC)
 * Redis Caching
 * Celery Task Queues
 * Database Design
 * Asynchronous Processing
-* Software Architecture
+* Dynamic Fee Calculation Logic
+* System Architecture Design
+* Frontend-Backend Integration
 
 ---
 
 ## 👨‍💻 Author
 
-Prateek Sharma
+**Prateek Sharma**
 
-GitHub:
-https://github.com/24dp1000047
+📧 [24dp1000047@ds.study.iitm.ac.in](mailto:24dp1000047@ds.study.iitm.ac.in)
 
-Email:
-[24dp1000047@ds.study.iitm.ac.in](mailto:24dp1000047@ds.study.iitm.ac.in)
+🔗 GitHub: https://github.com/24dp1000047
+
