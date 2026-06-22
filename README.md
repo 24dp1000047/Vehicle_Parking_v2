@@ -101,14 +101,17 @@ Vehicle_Parking_App (V1) — Flask + Jinja2 Server-Side Architecture
 * Monthly report generation
 * Asynchronous task execution
 
+
+
 ### 🌐 RESTful Architecture
 
 * Complete frontend-backend separation
 * REST API communication
-* Vue.js Single Page Application (SPA)
+* Modern Vue.js frontend
+* Component-based user interface
+* Dynamic client-side routing
 * Scalable and maintainable architecture
 
----
 
 ## 🏗️ System Architecture
 
