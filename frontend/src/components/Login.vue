@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="text-center mt-4 mb-2">
-      <h1 class="app-title">Vechile Parking App V 2</h1>
+      <h1 class="app-title">Vehicle Parking App V 2</h1>
     </div>
     <div class="d-flex flex-column justify-content-center align-items-center" style="min-height:80vh; padding:16px;">
       <div class="card login-card p-3" style="width:360px;">
